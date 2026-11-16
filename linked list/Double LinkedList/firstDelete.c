@@ -69,7 +69,7 @@ void display(){
         };
         node  = node->next;
     }
-    printf("->NULL ");
+    printf("->NULL  ");
 };
 
 
