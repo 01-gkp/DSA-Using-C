@@ -14,19 +14,21 @@ int main (){
 
     int choice ;
     while(1){
-        printf("\nPress 1--> Push \n 2-->Pop \n 3--> Peek  \n 4--> Display All \n5--> Break");
+        printf("\n=====================Press According to you ================================\n 1--> Push \n 2-->Pop \n 3--> Peek  \n 4--> Display All \n5--> Break");
         printf("\nEnter your Choice : ");
         scanf("%d",&choice);
 
         if(choice == 1) push();
         else if (choice == 2){ 
             pop();
-            displayAll(); }
+                 }
         else if (choice ==3) {
             peek();
-            displayAll(); }
+         }
         else if(choice==4) displayAll();
-        else printf("\n Invalid choice !! Please try again ");
+        else if (choice == 5) break;
+        else 
+            printf("\n Invalid choice !! Please try again ");
     }
     return 0;
 }
@@ -47,9 +49,9 @@ void pop(){
         printf("\nStack underFlow So you can't pop element ");
     }
     else {
-        printf("\n poped Item :",a[top]);
+        printf("\n poped Item : %d",a[top]);
         top--;
-        printf("\n pop successfully ");
+        printf("\n pop successfully \n");
 
     }
 }
@@ -59,7 +61,7 @@ void peek(){
         printf("\n Stack in UnderFlow ");
     }
     else{
-        printf("\n peek element is : ",a[top]);
+        printf("\n peek element is : %d",a[top]);
     }
 }
 
