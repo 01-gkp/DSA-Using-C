@@ -44,7 +44,7 @@ int main (){
 
 
  void dequeue(){
-    if (front == -1 && rear == -1 )printf("\nqueue is underflow !!");
+    if (front == -1 || rear < front )printf("\nqueue is underflow !!");
     else if (front > rear ) printf("\nQueue is Empty !!!");
     else {
         printf("\ndequeue item : %d",a[front]);
@@ -54,7 +54,7 @@ int main (){
  }
 
  void peek(){
-    if (front == -1 && rear == -1) printf("\nQueue is underFlow ");
+    if (front == -1 || rear < front ) printf("\nQueue is underFlow ");
     else {
         printf("\nPeek item is : %d",a[front]);
     }
@@ -62,7 +62,7 @@ int main (){
 
 
  void display (){
-        if (front == -1 && rear == -1) printf("\nQueue is underFlow ");
+        if (front == -1 || rear < front) printf("\nQueue is underFlow ");
         else {
             for ( int i= front ; i<=rear;i++){
                 printf("%d\t",a[i]);
